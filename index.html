@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acupuntura & Medicina China | Espacio INYO - Hernán Leguizamon</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        h1, h2, h3 { font-family: 'Cinzel', serif; text-transform: uppercase; letter-spacing: 0.1em; }
+        body { font-family: 'Lato', sans-serif; background-color: #fdfbf9; color: #1c1917; line-height: 1.8; }
+        
+        .hero-acupuntura { 
+            background: linear-gradient(rgba(253, 251, 249, 0.8), rgba(253, 251, 249, 0.95)), 
+            url('imagen/acupuntura.png'); 
+            background-size: cover; background-position: center; min-height: 80vh;
+        }
+
+        .turno-card { background: #fff; border: 1px solid #e7e5e4; transition: all 0.3s ease; }
+        .turno-disponible { border-left: 4px solid #166534; }
+        .turno-ocupado { opacity: 0.4; border-left: 4px solid #a8a29e; pointer-events: none; text-decoration: line-through; }
+        
+        #menu-toggle:checked ~ #side-menu { transform: translateX(0); }
+        #menu-toggle:checked ~ #menu-overlay { display: block; }
+    </style>
+</head>
+<body class="antialiased">
+
+    <input type="checkbox" id="menu-toggle" class="hidden">
+    <label for="menu-toggle" class="fixed top-6 left-6 z-50 cursor-pointer bg-white/80 backdrop-blur-md p-3 rounded-sm border border-stone-200 hover:bg-stone-900 hover:text-white transition duration-300 shadow-sm">
+        <div class="w-6 h-0.5 bg-current mb-1.5 transition"></div>
+        <div class="w-6 h-0.5 bg-current mb-1.5 transition"></div>
+        <div class="w-6 h-0.5 bg-current transition"></div>
+    </label>
+    <label id="menu-overlay" for="menu-toggle" class="fixed inset-0 bg-stone-900/20 backdrop-blur-sm z-40 hidden"></label>
+
+    <nav id="side-menu" class="fixed top-0 left-0 h-full w-72 bg-white z-50 shadow-2xl transform -translate-x-full transition-transform duration-300 ease-in-out p-12 flex flex-col border-r border-stone-100">
+        <label for="menu-toggle" class="absolute top-6 right-6 cursor-pointer text-stone-400 text-xl"><i class="fas fa-times"></i></label>
+        <div class="mt-12 italic">
+            <p class="text-[10px] uppercase tracking-[0.3em] text-stone-400 mb-8 font-bold border-b border-stone-100 pb-2">Espacio INYO ☯️</p>
+            <ul class="space-y-8 text-sm uppercase tracking-widest font-semibold italic">
+                <li><a href="https://inyodo.github.io/masaje-japones-/" class="block hover:text-stone-600 transition">Masaje Japonés</a></li>
+                <li><a href="https://inyodo.github.io/hiit-calistenia/" class="block hover:text-stone-600 transition">HIIT Calistenia</a></li>
+                <li><a href="https://inyodo.github.io/espacio-inyo-web/yoga.html" class="block hover:text-stone-600 transition">Clases de Yoga</a></li>
+                <li><a href="https://inyodo.github.io/espacio-inyo-web/zen-stretching.html" class="block hover:text-stone-600 transition">Zen Stretching</a></li>
+                <li><a href="https://inyodo.github.io/chamanismo/" class="block hover:text-stone-600 transition border-b border-stone-900 pb-1">Chamanismo</a></li>
+                <li><a href="#" class="block text-stone-900 font-bold underline underline-offset-8">Acupuntura</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero-acupuntura flex flex-col justify-center items-center text-center p-6 relative">
+        <div class="z-10 px-4">
+            <p class="text-stone-400 text-xs tracking-[0.8em] mb-4 font-bold uppercase">Medicina Tradicional China</p>
+            <h1 class="text-4xl md:text-7xl font-bold mb-6 italic text-stone-900">ACUPUNTURA &<br>EQUILIBRIO VITAL</h1>
+            <div class="w-24 h-px bg-stone-300 mx-auto my-8"></div>
+            <p class="text-lg md:text-xl text-stone-600 max-w-2xl mx-auto italic font-light">
+                Abordaje terapéutico integral por Hernán Leguizamon.
+            </p>
+        </div>
+    </header>
+
+    <section class="py-24 px-6 bg-white">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-2xl md:text-3xl mb-12 italic border-l-4 border-stone-900 pl-8 text-stone-800 uppercase">La perspectiva integral</h2>
+            
+            <div class="space-y-12 text-stone-600 italic text-lg leading-relaxed">
+                <p>En este espacio la salud no se entiende como ausencia de enfermedad sino como un desequilibrio. En nuestras sesiones no solo tratamos el síntoma sino que buscamos la raíz del desajuste.</p>
+                
+                <p>Combinamos técnicas milenarias como la acupuntura, moxibustión, ventosas y fitoterapia para ayudar a tu cuerpo que recupere la capacidad natural de sanar.</p>
+                
+                <p>Es un abordaje totalmente personalizado donde cada tratamiento es único. Vení a descubrir como una perspectiva integral puede transformar tu bienestar diario.</p>
+                
+                <div class="bg-stone-50 p-8 border-l-4 border-stone-200">
+                    <p class="text-stone-500 text-sm font-bold uppercase tracking-widest mb-2">Detalles de la sesión:</p>
+                    <ul class="text-stone-600 text-sm space-y-2">
+                        <li><i class="fas fa-clock mr-2 text-stone-400"></i> Duración: 1 hora y media aprox.</li>
+                        <li><i class="fas fa-box-open mr-2 text-stone-400"></i> Todos los materiales descartables incluidos.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="turnos" class="py-24 px-6 bg-stone-100">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-center text-4xl mb-4 italic uppercase font-bold text-stone-900">Agenda de Abril</h2>
+            <p class="text-center text-stone-400 text-[10px] uppercase tracking-widest mb-16 font-bold italic border-b border-stone-200 pb-6">Sesiones en Sede Lanús • Hernán Leguizamon</p>
+
+            <div class="mb-16">
+                <h3 class="text-stone-500 text-sm mb-6 italic uppercase tracking-widest font-bold">Lunes 30 de Marzo</h3>
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div class="turno-card turno-disponible p-6 flex justify-between items-center">
+                        <p class="text-xl font-bold text-stone-900 italic">14:00 HS</p>
+                        <a href="https://wa.me/541176194825?text=Hola%20Gast%C3%B3n!%20%F0%9F%91%8B%20Deseo%20reservar%20el%20turno%20de%20*Acupuntura*%20para%20el%20Lunes%2030/03%20a%20las%2014hs%20con%20Hern%C3%A1n%20Leguizamon.%20Valor:%20$60.000%20(Incluye%20Bonus%20Zen).%20%E2%9C%A8" class="bg-stone-900 text-white px-6 py-2 text-[9px] font-bold uppercase tracking-widest hover:bg-stone-700 transition italic">Solicitar</a>
+                    </div>
+                    <div class="turno-card turno-disponible p-6 flex justify-between items-center">
+                        <p class="text-xl font-bold text-stone-900 italic">15:30 HS</p>
+                        <a href="https://wa.me/541176194825?text=Hola%20Gast%C3%B3n!%20%F0%9F%91%8B%20Deseo%20reservar%20el%20turno%20de%20*Acupuntura*%20para%20el%20Lunes%2030/03%20a%20las%2015:30hs%20con%20Hern%C3%A1n%20Leguizamon.%20Valor:%20$60.000%20(Incluye%20Bonus%20Zen).%20%E2%9C%A8" class="bg-stone-900 text-white px-6 py-2 text-[9px] font-bold uppercase tracking-widest hover:bg-stone-700 transition italic">Solicitar</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-16">
+                <h3 class="text-stone-500 text-sm mb-6 italic uppercase tracking-widest font-bold">Martes 31 de Marzo</h3>
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div class="turno-card turno-disponible p-6 flex justify-between items-center">
+                        <p class="text-xl font-bold text-stone-900 italic">14:30 HS</p>
+                        <a href="https://wa.me/541176194825?text=Hola%20Gast%C3%B3n!%20%F0%9F%91%8B%20Deseo%20reservar%20el%20turno%20de%20*Acupuntura*%20para%20el%20Martes%2031/03%20a%20las%2014:30hs%20con%20Hern%C3%A1n%20Leguizamon.%20Valor:%20$60.000%20(Incluye%20Bonus%20Zen).%20%E2%9C%A8" class="bg-stone-900 text-white px-6 py-2 text-[9px] font-bold uppercase tracking-widest hover:bg-stone-700 transition italic">Solicitar</a>
+                    </div>
+                    <div class="turno-card turno-disponible p-6 flex justify-between items-center">
+                        <p class="text-xl font-bold text-stone-900 italic">16:00 HS</p>
+                        <a href="https://wa.me/541176194825?text=Hola%20Gast%C3%B3n!%20%F0%9F%91%8B%20Deseo%20reservar%20el%20turno%20de%20*Acupuntura*%20para%20el%20Martes%2031/03%20a%20las%2016hs%20con%20Hern%C3%A1n%20Leguizamon.%20Valor:%20$60.000%20(Incluye%20Bonus%20Zen).%20%E2%9C%A8" class="bg-stone-900 text-white px-6 py-2 text-[9px] font-bold uppercase tracking-widest hover:bg-stone-700 transition italic">Solicitar</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-16">
+                <h3 class="text-stone-500 text-sm mb-6 italic uppercase tracking-widest font-bold">Miércoles 01 de Abril</h3>
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div class="turno-card turno-disponible p-6 flex justify-between items-center">
+                        <p class="text-xl font-bold text-stone-900 italic">13:00 HS</p>
+                        <a href="https://wa.me/541176194825?text=Hola%20Gast%C3%B3n!%20%F0%9F%91%8B%20Deseo%20reservar%20el%20turno%20de%20*Acupuntura*%20para%20el%20Mi%C3%A9rcoles%2001/04%20a%20las%2013hs%20con%20Hern%C3%A1n%20Leguizamon.%20Valor:%20$60.000%20(Incluye%20Bonus%20Zen).%20%E2%9C%A8" class="bg-stone-900 text-white px-6 py-2 text-[9px] font-bold uppercase tracking-widest hover:bg-stone-700 transition italic">Solicitar</a>
+                    </div>
+                    <div class="turno-card turno-disponible p-6 flex justify-between items-center">
+                        <p class="text-xl font-bold text-stone-900 italic">14:30 HS</p>
+                        <a href="https://wa.me/541176194825?text=Hola%20Gast%C3%B3n!%20%F0%9F%91%8B%20Deseo%20reservar%20el%20turno%20de%20*Acupuntura*%20para%20el%20Mi%C3%A9rcoles%2001/04%20a%20las%2014:30hs%20con%20Hern%C3%A1n%20Leguizamon.%20Valor:%20$60.000%20(Incluye%20Bonus%20Zen).%20%E2%9C%A8" class="bg-stone-900 text-white px-6 py-2 text-[9px] font-bold uppercase tracking-widest hover:bg-stone-700 transition italic">Solicitar</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-16">
+                <h3 class="text-stone-500 text-sm mb-6 italic uppercase tracking-widest font-bold">Jueves 02 de Abril</h3>
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div class="turno-card turno-disponible p-6 flex justify-between items-center">
+                        <p class="text-xl font-bold text-stone-900 italic">14:30 HS</p>
+                        <a href="https://wa.me/541176194825?text=Hola%20Gast%C3%B3n!%20%F0%9F%91%8B%20Deseo%20reservar%20el%20turno%20de%20*Acupuntura*%20para%20el%20Jueves%2002/04%20a%20las%2014:30hs%20con%20Hern%C3%A1n%20Leguizamon.%20Valor:%20$60.000%20(Incluye%20Bonus%20Zen).%20%E2%9C%A8" class="bg-stone-900 text-white px-6 py-2 text-[9px] font-bold uppercase tracking-widest hover:bg-stone-700 transition italic">Solicitar</a>
+                    </div>
+                    <div class="turno-card turno-disponible p-6 flex justify-between items-center">
+                        <p class="text-xl font-bold text-stone-900 italic">16:00 HS</p>
+                        <a href="https://wa.me/541176194825?text=Hola%20Gast%C3%B3n!%20%F0%9F%91%8B%20Deseo%20reservar%20el%20turno%20de%20*Acupuntura*%20para%20el%20Jueves%2002/04%20a%20las%2016hs%20con%20Hern%C3%A1n%20Leguizamon.%20Valor:%20$60.000%20(Incluye%20Bonus%20Zen).%20%E2%9C%A8" class="bg-stone-900 text-white px-6 py-2 text-[9px] font-bold uppercase tracking-widest hover:bg-stone-700 transition italic">Solicitar</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white p-10 border border-stone-200 text-center italic shadow-sm relative overflow-hidden group">
+                <div class="absolute top-0 right-0 bg-stone-900 text-white text-[8px] font-bold px-4 py-1 uppercase tracking-widest">Acompañamiento INYO</div>
+                
+                <p class="text-stone-400 text-[10px] uppercase font-bold tracking-widest mb-4">Inversión por Sesión</p>
+                <div class="text-5xl font-bold text-stone-900 mb-6">$60.000.-</div>
+                
+                <div class="space-y-6 text-sm text-stone-500 mb-10">
+                    <p>• La reserva se confirma abonando el 50% ($30.000) vía transferencia.</p>
+                    <p>• Sesión de 1:30hs con diagnóstico y materiales incluidos.</p>
+                </div>
+
+                <div class="border-t border-stone-100 pt-8 mt-8">
+                    <p class="text-stone-900 font-bold text-xs uppercase tracking-widest mb-4 italic">✨ Beneficio Exclusivo por Sesión:</p>
+                    <p class="text-stone-500 text-[11px] leading-relaxed mb-6">
+                        Con tu sesión obtenés de regalo **1 Clase de Zen Stretching** no arancelada para complementar tu proceso de sanación.
+                    </p>
+                    <a href="https://inyodo.github.io/espacio-inyo-web/zen-stretching.html" class="inline-block border-b-2 border-stone-900 pb-1 text-[10px] font-bold uppercase tracking-tighter hover:text-stone-400 hover:border-stone-200 transition">
+                        Ver qué es Zen Stretching <i class="fas fa-arrow-right ml-1"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-24 px-6 bg-white text-center border-t border-stone-100">
+        <h2 class="text-4xl mb-16 italic tracking-tighter uppercase font-bold text-stone-900">Espacio INYO ☯️</h2>
+        <div class="flex flex-col items-center mb-12 italic text-stone-500">
+            <p class="text-xs font-bold uppercase tracking-widest mb-2">Sede Lanús Oeste Centro</p>
+            <p class="text-sm">Gdor. Carlos Tejedor 335, Lanús.</p>
+        </div>
+        <p class="text-[9px] text-stone-300 uppercase tracking-widest font-bold">© 2026 Medicina China | Sabiduría & Salud</p>
+    </footer>
+
+    <a href="https://wa.me/541176194825" class="fixed bottom-8 right-8 bg-stone-900 text-white w-14 h-14 rounded-full shadow-2xl flex items-center justify-center text-2xl hover:scale-110 transition-transform z-50">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+</body>
+</html>
