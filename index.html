@@ -29,10 +29,32 @@
         
         #menu-toggle:checked ~ #side-menu { transform: translateX(0); }
         #menu-toggle:checked ~ #menu-overlay { display: block; }
+    /* Botón Música Acupuntura - Estética Zen Minimalista */
+        .music-control-acupuntura {
+            position: fixed; bottom: 32px; left: 32px; width: 50px; height: 50px;
+            border-radius: 50%; background: rgba(255, 255, 255, 0.9); border: 1px solid #e7e5e4;
+            display: flex; align-items: center; justify-content: center;
+            cursor: pointer; z-index: 100; transition: all 0.5s ease; color: #1c1917;
+        }
+        .music-control-acupuntura.active {
+            background: #1c1917; color: #fdfbf9; border-color: #1c1917;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            animation: pulse-acupuntura 3s infinite ease-in-out;
+        }
+        @keyframes pulse-acupuntura {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.08); }
+            100% { transform: scale(1); }
+        }
     </style>
 </head>
 <body class="antialiased">
-
+<div id="music-btn" class="music-control-acupuntura" onclick="toggleAcupunturaMusic()">
+        <i id="music-icon" class="fas fa-leaf"></i>
+    </div>
+    <audio id="audio-acupuntura" loop>
+        <source src="musica/acupuntura.mp3" type="audio/mpeg">
+    </audio>
     <input type="checkbox" id="menu-toggle" class="hidden">
     <label for="menu-toggle" class="fixed top-6 left-6 z-50 cursor-pointer bg-white/80 backdrop-blur-md p-3 rounded-sm border border-stone-200 hover:bg-stone-900 hover:text-white transition duration-300 shadow-sm">
         <div class="w-6 h-0.5 bg-current mb-1.5 transition"></div>
@@ -220,6 +242,23 @@
     <a href="https://wa.me/541176194825" class="fixed bottom-8 right-8 bg-stone-900 text-white w-14 h-14 rounded-full shadow-2xl flex items-center justify-center text-2xl hover:scale-110 transition-transform z-50">
         <i class="fab fa-whatsapp"></i>
     </a>
-
+<script>
+        function toggleAcupunturaMusic() {
+            const audio = document.getElementById('audio-acupuntura');
+            const btn = document.getElementById('music-btn');
+            const icon = document.getElementById('music-icon');
+            
+            if (audio.paused) {
+                audio.play();
+                audio.volume = 0.4; // Volumen sugerido al 40%
+                btn.classList.add('active');
+                icon.className = "fas fa-wind"; // Cambia el icono al sonar
+            } else {
+                audio.pause();
+                btn.classList.remove('active');
+                icon.className = "fas fa-leaf";
+            }
+        }
+    </script>
 </body>
 </html>
