@@ -12,9 +12,15 @@
         body { font-family: 'Lato', sans-serif; background-color: #fdfbf9; color: #1c1917; line-height: 1.8; }
         
         .hero-acupuntura { 
-            background: linear-gradient(rgba(253, 251, 249, 0.8), rgba(253, 251, 249, 0.95)), 
-            url('imagen/acupuntura.png'); 
-            background-size: cover; background-position: center; min-height: 80vh;
+            background: linear-gradient(rgba(253, 251, 249, 0.7), rgba(253, 251, 249, 0.9)), 
+            url('./imagen/acupuntura.png'); /* El ./ asegura que busque en la carpeta local */
+            background-size: cover; 
+            background-position: center; 
+            background-attachment: fixed; /* Esto le da un efecto de desplazamiento elegante */
+            min-height: 85vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .turno-card { background: #fff; border: 1px solid #e7e5e4; transition: all 0.3s ease; }
