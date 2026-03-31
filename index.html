@@ -12,9 +12,15 @@
         body { font-family: 'Lato', sans-serif; background-color: #fdfbf9; color: #1c1917; line-height: 1.8; }
         
         .hero-acupuntura { 
-            background: linear-gradient(rgba(253, 251, 249, 0.8), rgba(253, 251, 249, 0.95)), 
+            /* Cambiamos el blanco por negro (0,0,0) con muy poca opacidad para dar nitidez */
+            background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(12, 10, 9, 0.5)), 
             url('imagen/acupuntura.png'); 
-            background-size: cover; background-position: center; min-height: 80vh;
+            background-size: cover; 
+            background-position: center; 
+            min-height: 85vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .turno-card { background: #fff; border: 1px solid #e7e5e4; transition: all 0.3s ease; }
